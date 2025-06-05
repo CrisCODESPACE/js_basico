@@ -58,14 +58,14 @@ function saludar(nombre) {
 
 // Crea una función llamada sumar que reciba dos número como parámetros y devuelva su resultado.
 
-function sumar(num1, num2) {
-  if (typeof num1 !== "number" || typeof num2 !== "number") {
-    console.log("No se puede hacer el cálculo");
-    return null;
-  } else {
-    return num1 + num2;
-  }
-}
+// function sumar(num1, num2) {
+//   if (typeof num1 !== "number" || typeof num2 !== "number") {
+//     console.log("No se puede hacer el cálculo");
+//     return null;
+//   } else {
+//     return num1 + num2;
+//   }
+// }
 
 // console.log(sumar(1, false));
 
@@ -234,3 +234,15 @@ console.log(texto(cogerNombre, "Sintra"));
 function hacerHelado(sabor) {
   console.log(`Su helado de ${sabor} se está preparando`);
 }
+
+// FUNCION ANÓNIMA
+
+function operar(a, b, fn) {
+  return fn(a, b);
+}
+
+const sumar = function (a, b) {
+  return a + b;
+};
+
+console.log(operar(2, 3, sumar));
